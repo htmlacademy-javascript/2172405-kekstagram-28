@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм»
 
-* Студент: [Надежда Перепелкина](https://up.htmlacademy.ru/javascript/28/user/2172405).
-* Наставник: `Неизвестно`.
+* Студент: [Надежда Перепелкина](https://htmlacademy.ru/profile/id2172405).
+* Наставник: [Артем Рудов] (https://htmlacademy.ru/profile/id345377).
 
 ---
 
