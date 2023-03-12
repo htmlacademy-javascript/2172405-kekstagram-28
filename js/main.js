@@ -102,9 +102,9 @@ const createPicture = (index) => ({
   ),
 });
 
-const getPic = () =>
+const getPictures = () =>
   Array.from({length: PIC_COUNT}, (_, index) =>
     createPicture(index + 1)
   );
 
-getPic();
+getPictures();
