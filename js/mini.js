@@ -1,5 +1,5 @@
 const otherUsersPictures = document.querySelector('.pictures');
-const newThumbTemplate = document.querySelector('#.picture')
+const newThumbTemplate = document.querySelector('#picture')
   .content
   .querySelector('.picture');
 
@@ -8,7 +8,7 @@ const createThumb = ({ url, comments, likes, description }) => {
   thumb.querySelector('.picture__img').src = url;
   thumb.querySelector('.picture__img').alt = description;
   thumb.querySelector('.picture__comments').textContent = comments.length;
-  thumb.querySelector('.picture__likes').textContent = likes.length;
+  thumb.querySelector('.picture__likes').textContent = likes;
 
   return thumb;
 };
