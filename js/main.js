@@ -1,4 +1,4 @@
 import { getPictures } from './data.js';
-import { renderThumbs } from './mini.js';
+import { renderGallery } from './gallery.js';
 
-renderThumbs(getPictures());
+renderGallery(getPictures());
