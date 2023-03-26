@@ -6,13 +6,19 @@ const container = document.querySelector('.pictures');
 const renderGallery = (pictures) => {
   container.addEventListener ('click', (evt) => {
     const thumb = evt.target.closest('[data-thumb-id]');
-    if(!thumb) {
+
+    if (!thumb) {
       return;
     }
 
     const picture = pictures.find (
       (item) => item.id === +thumb.dataset.thumbId
     );
+
+    if (!picture) {
+      return;
+    }
+
     createBigPicture(picture);
   });
 
