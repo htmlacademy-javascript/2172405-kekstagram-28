@@ -27,11 +27,13 @@ const onCancelButtonClick = () => {
 const createComment = ({ avatar, message }) => {
   const commentElement = document.createElement('li');
   commentElement.className = 'social__comment';
+
   const img = document.createElement('img');
   img.width = 35;
   img.height = 35;
   img.className = 'social__picture';
   img.src = avatar;
+
   const text = document.createElement('p');
   text.className = 'social__text';
   text.textContent = message;
