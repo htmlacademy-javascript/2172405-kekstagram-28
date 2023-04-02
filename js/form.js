@@ -1,3 +1,5 @@
+import { resetScale } from './scale.js';
+import { resetEffects } from './effects.js';
 import { isEscapeKey } from './util.js';
 
 const HASHTAG_MAX_COUNT = 5;
@@ -25,6 +27,8 @@ const showModal = () => {
 
 const hideModal = () => {
   form.reset();
+  resetScale();
+  resetEffects();
   pristine.reset();
   overlay.classList.add('hidden');
   document.body.classList.remove('modal-open');
