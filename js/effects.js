@@ -55,7 +55,7 @@ let chosenEffect = DEFAULT_EFFECT;
 const imageElement = document.querySelector('.img-upload__preview img');
 const effectsElement = document.querySelector('.effects');
 const sliderElement = document.querySelector('.effect-level__slider');
-const sliderContainer = document.querySelector('.img-upload__overlay');
+const sliderContainer = document.querySelector('.img-upload__effect-level');
 const effectLevelElement = document.querySelector('.effect-level__value');
 
 const isDefault = () => chosenEffect === DEFAULT_EFFECT;
@@ -103,11 +103,6 @@ const onSliderUpdate = () => {
     effectLevelElement.value = sliderValue;
   }
 };
-//   imageElement.style.filter = isDefault()
-//     ? DEFAULT_EFFECT.style
-//     : `${chosenEffect.style}(${sliderValue}${chosenEffect.unit})`;
-//   effectLevelElement.value = sliderValue;
-// };
 
 const resetEffects = () => {
   chosenEffect = DEFAULT_EFFECT;
