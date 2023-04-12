@@ -1,5 +1,5 @@
-const EFFECTS = [
-  {
+const EFFECTS = {
+  none: {
     name: 'none',
     style: 'none',
     min: 0,
@@ -7,7 +7,7 @@ const EFFECTS = [
     step: 1,
     unit: '',
   },
-  {
+  chrome: {
     name: 'chrome',
     style: 'grayscale',
     min: 0,
@@ -15,7 +15,7 @@ const EFFECTS = [
     step: 0.1,
     unit: '',
   },
-  {
+  sepia:   {
     name: 'sepia',
     style: 'sepia',
     min: 0,
@@ -23,7 +23,7 @@ const EFFECTS = [
     step: 0.1,
     unit: '',
   },
-  {
+  marvin:   {
     name: 'marvin',
     style: 'invert',
     min: 0,
@@ -31,7 +31,7 @@ const EFFECTS = [
     step: 1,
     unit: '%',
   },
-  {
+  phobos:   {
     name: 'phobos',
     style: 'blur',
     min: 0,
@@ -39,7 +39,7 @@ const EFFECTS = [
     step: 0.1,
     unit: 'px',
   },
-  {
+  heat:  {
     name: 'heat',
     style: 'brightness',
     min: 1,
@@ -47,9 +47,9 @@ const EFFECTS = [
     step: 0.1,
     unit: '',
   },
-];
+};
 
-const DEFAULT_EFFECT = EFFECTS[0];
+const DEFAULT_EFFECT = EFFECTS.none;
 let chosenEffect = DEFAULT_EFFECT;
 
 const imageElement = document.querySelector('.img-upload__preview img');
@@ -89,13 +89,15 @@ const onEffectsChange = (evt) => {
   if (!evt.target.classList.contains('effects__radio')) {
     return;
   }
-  chosenEffect = EFFECTS.find((effect) => effect.name === evt.target.value);
-  imageElement.className = `effects__preview--${chosenEffect.name}`;
+
+  chosenEffect = EFFECTS[evt.target.value];
+  imageElement.className = `effects__preview--${chosenEffect}`;
   updateSlider();
 };
 
 const onSliderUpdate = () => {
   const sliderValue = sliderElement.noUiSlider.get();
+
   if (isDefault()) {
     imageElement.style.filter = DEFAULT_EFFECT.style;
   } else {
