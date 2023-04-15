@@ -1,7 +1,15 @@
 import {isEscapeKey} from './util.js';
 
-const errorTemplate = document.querySelector('#error').content.querySelector('.error');
-const successTemplate = document.querySelector('#success').content.querySelector('.success');
+// const errorTemplate = document.querySelector('#error').content.querySelector('.error');
+// const successTemplate = document.querySelector('#success').content.querySelector('.success');
+
+function getTemplate(selector, className) {
+  const template = document.querySelector(selector).content.querySelector(className);
+  return template.cloneNode(true);
+}
+
+const errorTemplate = getTemplate('#error', '.error');
+const successTemplate = getTemplate('#success', '.success');
 
 const addError = (errorText, onCloseError) => {
   const errorElement = errorTemplate.cloneNode(true);
