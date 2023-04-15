@@ -80,7 +80,7 @@ pristine.addValidator(
 
 const SubmitButtonText = {
   IDLE: 'Опубликовать',
-  SENDING: 'Пубилкую...'
+  SENDING: 'Публикую...'
 };
 
 const blockSubmitButton = () => {
