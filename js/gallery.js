@@ -22,7 +22,7 @@ const renderGallery = (pictures) => {
     createBigPicture(picture);
   });
 
-  renderThumbs (pictures, container);
+  renderThumbs (pictures);
 };
 
 export { renderGallery };

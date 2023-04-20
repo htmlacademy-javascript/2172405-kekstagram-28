@@ -15,6 +15,7 @@ const createThumb = ({ url, comments, likes, description, id }) => {
 };
 
 const renderThumbs = (pictures) => {
+  otherUsersPictures.querySelectorAll('.picture').forEach((element) => element.remove());
   const fragment = document.createDocumentFragment();
   pictures.forEach((picture) => {
     const thumb = createThumb(picture);
