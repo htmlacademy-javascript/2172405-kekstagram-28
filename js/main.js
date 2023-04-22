@@ -3,7 +3,8 @@ import { getData, sendData } from './api.js';
 import {showAlert, debounce} from './util.js';
 import { addSuccess, addError } from './error-success.js';
 import { onFormSubmit, hideModal } from './form.js';
-import {activateFilter, getSortedPhotos} from './filter.js';
+import { activateFilter, getSortedPhotos } from './filter.js';
+import './new-photo.js';
 
 onFormSubmit (async (data) => {
   try {
