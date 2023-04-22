@@ -1,5 +1,7 @@
 import { isEscapeKey } from './util.js';
 
+const COMMENTS_PORTION_COUNT = 5;
+
 const bigPictureModal = document.querySelector('.big-picture');
 const commentList = bigPictureModal.querySelector('.social__comments');
 const commentsCount = bigPictureModal.querySelector('.social__comment-count');
