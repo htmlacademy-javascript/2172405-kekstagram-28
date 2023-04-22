@@ -40,4 +40,21 @@ const showAlert = (message) => {
   }, ALERT_TIME);
 };
 
-export { getRandomInteger, getRandomArrayElement, createIdGenerator, isEscapeKey, isEnterKey, showAlert };
+function getSortRandomly() {
+  return Math.random() - 0.5;
+}
+
+function getSortByComments(photoA, photoB) {
+  return photoB.comments.length - photoA.comments.length;
+}
+
+function debounce(callback, timeoutDelay) {
+  let timeoutId;
+
+  return (...rest) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => callback.apply(this, rest), timeoutDelay);
+  };
+}
+
+export { getRandomInteger, getRandomArrayElement, createIdGenerator, isEscapeKey, isEnterKey, showAlert, debounce, getSortRandomly, getSortByComments};
